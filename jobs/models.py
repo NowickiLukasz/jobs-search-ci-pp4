@@ -30,8 +30,25 @@ class Profile(models.Model):
 #     pass
 
 
-# class JobListing(models.Model):
-#     pass
+class JobListing(models.Model):
+    """
+        Creates model for details used to post and display job details.
+    """
+    POSITION_TYPE = (
+        ('full-time', 'full-time'),
+        ('part-time', 'part-time')
+    )
+
+    title = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    salary = models.PositiveSmallIntegerField()
+    position_type = models.CharField(max_length=20, choices=POSITION_TYPE)
+    posted_date = models.DateTimeField(auto_now=True)
+    job_description = models.TextField()
+    # employer = models.ForeignKey(to, on_delete)
+
+    def __str__(self):
+        return self.title + " | " + self.location 
 
 
 # class SavedJob(models.Model):
