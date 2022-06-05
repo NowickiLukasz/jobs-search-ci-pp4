@@ -8,16 +8,11 @@ from .models import JobListing
 # def home(request):
 #     return HttpResponse("Hello World")
 
-
-
-def home(request):
-    return render(request, 'index.html')
+class Home(ListView):
+    model = JobListing
+    template_name = 'index.html'
 
 
 class JobList(ListView):
     model = JobListing
     template_name = 'job-listing.html'
-
-# def job_listing(request):
-#     return render(request, 'job-listing.html')
-

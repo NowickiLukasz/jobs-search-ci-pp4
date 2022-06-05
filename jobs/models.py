@@ -45,7 +45,7 @@ class JobListing(models.Model):
     position_type = models.CharField(max_length=20, choices=POSITION_TYPE)
     posted_date = models.DateTimeField(auto_now=True)
     job_description = models.TextField()
-    # employer = models.ForeignKey(to, on_delete)
+    # employer = models.ForeignKey(Employer, on_delete=CASCADE)
 
     def __str__(self):
         return self.title + " | " + self.location 

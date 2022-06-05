@@ -2,8 +2,19 @@
 
 
 {% block content %}
-Jobs listing page
-    
+
+{% for job in object_list %}
+<div class="container mt-4">
+    <div class="card">
+    <h5 class="card-header">{{ job.title }}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{ job.location }}</h5>
+            <a href="#" class="btn btn-primary">Apply Here</a>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
 
 
 {% endblock %}
