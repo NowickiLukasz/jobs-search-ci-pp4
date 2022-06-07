@@ -5,7 +5,8 @@ from .views import (
     Home,
     JobDescriptionView,
     AddJobView,
-    EditJobListing
+    EditJobListing,
+    DeleteJobListing,
 )
 
 # urlpatterns = [
@@ -26,5 +27,10 @@ urlpatterns = [
         'edit-job-listing/<int:pk>',
         EditJobListing.as_view(),
         name='edit-job-listing'
+    ),
+    path(
+        'delete-job-listing/<int:pk>',
+        DeleteJobListing.as_view(),
+        name='delete-job-listing'
     )
 ]

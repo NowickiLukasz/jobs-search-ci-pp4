@@ -6,7 +6,12 @@
 <div class="container">
     <div class="row" id="job-description">
         <div class="col-8">
-            <h2>{{ joblisting.title }} <a href="{% url 'edit-job-listing' joblisting.pk %}">Edit</a></h2>
+            <h2>{{ joblisting.title }} 
+                <a href="{% url 'edit-job-listing' joblisting.pk %}">Edit</a>
+                <a href="{% url 'delete-job-listing' joblisting.pk %}">Delete</a>
+                <!-- Insert functionality to only allow logged in user to like  -->
+                <span><i class="fa-regular fa-heart"></i></span>
+            </h2>
             <h4>{{ joblisting.location }}</h4>
             <h4>{{ joblisting.salary }}</h4>
             <h4>{{ joblisting.position_type }}</h4>

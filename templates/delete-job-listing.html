@@ -4,15 +4,13 @@
 {% block content %}
 
     <h1>
-        Edit Job Posting
-
+        Delete Job Listing.
     </h1>
-    
+
     <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button>Edit Job Listing</button>
         
+        <button>Delete Job Listing</button>
     </form>
 
 

@@ -1,6 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import (
+    ListView,DetailView, CreateView, UpdateView, DeleteView,
+
+    )
 from .models import JobListing
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -39,3 +43,9 @@ class EditJobListing(UpdateView):
         'title', 'location', 'salary', 'position_type',
         'job_description',
     )
+
+
+class DeleteJobListing(DeleteView):
+    model = JobListing
+    template_name = 'delete-job-listing.html'
+    success_url = reverse_lazy('home')
