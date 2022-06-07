@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from .models import JobListing
 
 # Create your views here.
@@ -31,3 +31,11 @@ class AddJobView(CreateView):
         'job_description',
     )
 
+
+class EditJobListing(UpdateView):
+    model = JobListing
+    template_name = 'edit-job-listing.html'
+    fields = (
+        'title', 'location', 'salary', 'position_type',
+        'job_description',
+    )

@@ -52,7 +52,7 @@ class JobListing(models.Model):
         return self.title + " | " + self.location 
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('job-listing')
 
 
 # class SavedJob(models.Model):
