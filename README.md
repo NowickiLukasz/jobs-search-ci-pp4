@@ -1,3 +1,33 @@
+
+
+Job Listings Site
+
+This site is a platform used to advertise jobs though posts. 
+The premise of the site is to allow employers to post jobs on the site for all to see. 
+The employer account user may create, update and delete the job listings from their own account. 
+
+The general user may apply for each job posted, they can save it and leave a cover letter so that the employer may review it for the application. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Starting template for project 
 
 							Job Application platform
