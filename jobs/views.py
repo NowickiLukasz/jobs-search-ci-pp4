@@ -16,3 +16,8 @@ class Home(ListView):
 class JobList(ListView):
     model = JobListing
     template_name = 'job-listing.html'
+
+
+class JobDescriptionView(DetailView):
+    model = JobListing
+    template_name = 'job-description.html'

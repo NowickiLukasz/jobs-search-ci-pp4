@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from jobs.countries import NATIONALITIES
 
 
@@ -49,6 +50,9 @@ class JobListing(models.Model):
 
     def __str__(self):
         return self.title + " | " + self.location 
+
+    def get_absolute_url(self):
+        return reverse('home')
 
 
 # class SavedJob(models.Model):

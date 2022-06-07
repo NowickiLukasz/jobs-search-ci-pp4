@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <h2> {{ joblisting.title }}</h2>
+            <h4>{{ joblisting.location }}</h4>
+            <h4>{{ joblisting.salary }}</h4>
+            <h4>{{ joblisting.position_type }}</h4>
+            <h4>{{ joblisting.posted_date }}</h4>
+            <p> {{ joblisting.job_description }}</p>
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

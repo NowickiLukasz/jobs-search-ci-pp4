@@ -9,11 +9,10 @@
     <h5 class="card-header">{{ job.title }}</h5>
         <div class="card-body">
             <h5 class="card-title">{{ job.location }}</h5>
-            <a href="#" class="btn btn-primary">Apply Here</a>
+            <a href="{% url 'job-description' job.pk %}" class="btn btn-primary">Apply Here</a>
         </div>
     </div>
 </div>
-
 {% endfor %}
 
 
