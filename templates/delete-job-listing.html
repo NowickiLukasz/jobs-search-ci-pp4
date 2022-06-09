@@ -3,9 +3,12 @@
 
 {% block content %}
 
+{% if user.is_authenticated%}
+
     <h1>
         Delete Job Listing.
     </h1>
+    
 
     <form method="POST">
         {% csrf_token %}
@@ -13,5 +16,9 @@
         <button>Delete Job Listing</button>
     </form>
 
+{% else %}
+Please log in to view this page
+
+{% endif %}
 
 {% endblock %}

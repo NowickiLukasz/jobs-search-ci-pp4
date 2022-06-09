@@ -3,17 +3,19 @@
 
 {% block content %}
 
+{% if user.is_authenticated%}
+    
     <h1>
         Edit Job Posting
-
     </h1>
-    
+
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button>Edit Job Listing</button>
-        
     </form>
-
+{% else %}
+    Please log in to view this page
+{% endif %}
 
 {% endblock %}

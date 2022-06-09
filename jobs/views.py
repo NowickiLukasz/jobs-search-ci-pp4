@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import (
-    ListView,DetailView, CreateView, UpdateView, DeleteView,
-
+    ListView, DetailView, CreateView, UpdateView, DeleteView,
+    
     )
-from .models import JobListing
+# from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
+from .models import JobListing
+
+
+
 
 # Create your views here.
 
@@ -49,3 +53,5 @@ class DeleteJobListing(DeleteView):
     model = JobListing
     template_name = 'delete-job-listing.html'
     success_url = reverse_lazy('home')
+
+

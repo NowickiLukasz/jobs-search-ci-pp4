@@ -1,11 +1,7 @@
 from django.urls import path
 # from . import views
 from .views import (
-    JobList,
-    Home,
-    JobDescriptionView,
-    AddJobView,
-    EditJobListing,
+    JobList, Home, JobDescriptionView, AddJobView, EditJobListing,
     DeleteJobListing,
 )
 
@@ -32,5 +28,7 @@ urlpatterns = [
         'delete-job-listing/<int:pk>',
         DeleteJobListing.as_view(),
         name='delete-job-listing'
-    )
+    ),
+
+    
 ]

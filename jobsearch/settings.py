@@ -50,12 +50,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'jobs',
+    
 ]
 
 SITE_ID = 1
 
-LOGIN_REDIRECT = '/'
-LOGOUT_REDIRECT = '/'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 
 MIDDLEWARE = [

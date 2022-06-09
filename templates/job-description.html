@@ -6,29 +6,36 @@
 <div class="container">
     <div class="row" id="job-description">
         <div class="col-8">
-            <h2>{{ joblisting.title }} 
+            <h2>{{ joblisting.title }}
+                {% if user.is_authenticated%}
                 <a href="{% url 'edit-job-listing' joblisting.pk %}">Edit</a>
                 <a href="{% url 'delete-job-listing' joblisting.pk %}">Delete</a>
                 <!-- Insert functionality to only allow logged in user to like  -->
                 <span><i class="fa-regular fa-heart"></i></span>
+                {% endif %}
             </h2>
             <h4>{{ joblisting.location }}</h4>
             <h4>{{ joblisting.salary }}</h4>
             <h4>{{ joblisting.position_type }}</h4>
             <h4>{{ joblisting.posted_date }}</h4>
             <p> {{ joblisting.job_description }}</p>
+            <p> {{ user.id }}</p>
+
             
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-8">
-            <button type="submit" action="POST">Submit Application</button>
+
+{% if user.is_authenticated %}
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <button type="submit" action="POST">Submit Application</button>
+            </div>
         </div>
     </div>
-</div>
+{% endif %}
 
 
 {% endblock %}
